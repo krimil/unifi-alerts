@@ -98,7 +98,7 @@ while(true) {
     echo "New host found - $client->mac - ($client->hostname) - sending email!\n";
     $known_hosts[$client->mac] = $client;
 
-    $mail->Subject = "Never Seen $client->mac - ($client->hostname) connecting to $client->essid";
+    $mail->Subject = "New client found $client->mac - ($client->hostname) connecting to $client->essid";
     $mail->Body = "Full Info: " . json_encode($client, JSON_PRETTY_PRINT) . "\n\n"; 
 
     try {
