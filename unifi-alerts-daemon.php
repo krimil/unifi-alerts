@@ -65,14 +65,14 @@ try {
     echo 'Email setup did not work... Mailer Error: ', $mail->ErrorInfo;
 }
 
-/* # debug stuff for lazy dev.
+# debug stuff for lazy dev.
 echo $controller_user;
 echo "\n";
 echo $controller_password;
 echo "\n";
 echo $controller_url;
 echo "\n";
-*/
+
 $unifi_connection = new UniFi_API\Client($controller_user, $controller_password, $controller_url, $site_id, $controller_version, false);
 $login            = $unifi_connection->login();
 
